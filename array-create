@@ -1,0 +1,29 @@
+//Creating an array and inserting values into it
+
+#include<stdio.h>
+#define max 10 //Defining a macro to limit the maximum number of elements
+
+void main() 
+{
+	int a[max],n,i;
+	printf("Enter the array size\n"); // Prompting the user to provide array size
+	scanf("%d",&n);
+    	if (n<=max) // Ensuring bounds checking on array size
+	{
+		printf("\nEnter the values of array elements\n");
+		for (i=0;i<n;i++)
+		{
+	       		printf("\nElement %d\n",i);
+	       		scanf("%d",&a[i]);
+    		}
+		printf("\nThe array elements are:\n");
+		for (i=0;i<n;i++)
+    		{
+        		printf("%d\t",a[i]);
+		}
+	}
+	else
+	{
+        	printf("Array out of bounds");
+	}
+}
